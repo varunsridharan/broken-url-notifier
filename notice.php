@@ -183,16 +183,18 @@ function checkImage() {
 					<strong>Referenced on Page:</strong> <a href='".stripslashes($_POST['page'])."'> 
 						".stripslashes($_POST['page']).
 					"</a>"; 
-		if(!empty(get_option('broken_url_notifier_email'))) {
-            $bun_email = get_option('broken_url_notifier_email');
-        } else {
+		if(empty(get_option('broken_url_notifier_email'))) {
             $bun_email = get_option('admin_email');
+            
+        } else {
+            $bun_email = get_option('broken_url_notifier_email');
         }
            
-		if(!empty(get_option('broken_url_notifier_email_subject'))) {
-            $bun_email_subject = get_option('broken_url_notifier_email_subject');
-        } else {
+		if(empty(get_option('broken_url_notifier_email_subject'))) {
             $bun_email_subject = '404 Image Found';
+        } else {
+            $bun_email_subject = get_option('broken_url_notifier_email_subject');
+            
         }
            
 		if(! wp_mail($bun_email, $bun_email_subject, $content )) { 
