@@ -1,0 +1,4 @@
+<?php
+// Scilence is Golden
+
+?>
