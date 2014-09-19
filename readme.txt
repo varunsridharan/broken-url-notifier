@@ -1,4 +1,4 @@
-=== Funny Branding ===
+=== Broken Url Notifier ===
 Author URI: http://varunsridharan.in/
 Plugin URL: https://wordpress.org/plugins/broken-link/
 Donate link: http://varunsridharan.in/
