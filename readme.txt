@@ -1,11 +1,12 @@
 === Broken Url Notifier ===
+Contributors: varunms
 Author URI: http://varunsridharan.in/
-Plugin URL: https://wordpress.org/plugins/broken-link/
+Plugin URL: https://wordpress.org/plugins/broken-url-notifier/
 Donate link: http://varunsridharan.in/
 Tags: broken,borken image, borken url, 404 page , 404 not found, wordpress 404
 Requires at least: 2.0
 Tested up to: 4.0
-Stable tag: 0.1
+Stable tag: 0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,7 +24,7 @@ Note : Email id will be taken from site administrator email id.
 
 This section describes how to install the plugin and get it working.
 
-* Upload `funny-branding` to the `/wp-content/plugins/` directory
+* Upload `broken-url-notifier` to the `/wp-content/plugins/` directory
 * Activate the plugin through the \'Plugins\' menu in WordPress
  
 
@@ -50,6 +51,9 @@ Oops. Please User github / WordPress to post bugs. <a href="https://github.com/t
 
 
 == Changelog ==
+= 0.2 =
+* Fixed Issue With Error Image Display 
+* Fixed Wordpress Issue
 
 = 0.1 =
 * Base Version
