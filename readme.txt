@@ -6,19 +6,29 @@ Donate link: http://varunsridharan.in/
 Tags: broken,borken image, borken url, 404 page , 404 not found, wordpress 404
 Requires at least: 2.0
 Tested up to: 4.0
-Stable tag: 0.2
+Stable tag: 0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Get notified when there is some broken url or image in your website
 
 == Description ==
-This plugin will send email to the site admin when there is broken url.
+
+<h3>Plugin Features </h3>
+* Broken Image Notification
+* Broken Page Notification
+* Broken Image Logger
+* Broken Page Logger
+* Custom 404 Image
+* Configurable Email ID
+* Detailed Logger Page
+
+This plugin will send email to the site admin when there is broken url or Image.
 
 This plugin will add a javascript your website to get 404 image notification in your website and send's mail using ajax
 and also there is a hook written for 404 page in wp to get notified when there is some broken link
 
-Note : Email id will be taken from site administrator email id.
+Note : Email id will take site administrator email id if no email id is configured in plugin settings.
 
 == Installation ==
 
@@ -31,6 +41,7 @@ This section describes how to install the plugin and get it working.
 == Screenshots ==
 
 1. Plugin Settings Page
+2. Report Page View
 
 
 
@@ -51,6 +62,14 @@ Oops. Please User github / WordPress to post bugs. <a href="https://github.com/t
 
 
 == Changelog ==
+= 0.3 =
+* Converted Whole Plugin Into Class
+* Option To Configure Notification Settings
+* Option To Configure Logger Settings
+* Fixed Error Diplay In Front End 
+* Fixed issue with wordpress less than  3.6
+* Added Logger Page
+
 = 0.2 =
 * Fixed Issue With Error Image Display 
 * Fixed Wordpress Issue

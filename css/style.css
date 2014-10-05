@@ -1,0 +1,95 @@
+table.details{margin:10px 0!important;width:100%;font-family:verdana,arial,sans-serif;font-size:13px;color:#333;border-width:1px;border-color:#666;border-collapse:collapse}
+table.tab-table tr th{text-align:left}
+table.details tr th{border-width:1px;padding:8px;border-style:solid;border-color:#666;background-color:#dedede}
+table.details tr td{border-width:1px;padding:8px;border-style:solid;border-color:#666;background-color:#fff}
+table.details{text-align:left;}
+
+.bubble {
+  animation: expand .75s ease-in-out infinite;
+  border-radius: 20px;
+  display: inline-block;
+  transform-origin: center center;
+  margin: 0 6px;
+  width: 20px;
+  height: 20px;
+}
+
+img.error_img{ margin-right:10px; vertical-align: middle;cursor: pointer;} 
+img.error_img.addBorder{border:3px solid #595959;}
+
+.bubble:nth-child(1) {background: #27ae60;}
+.bubble:nth-child(2) {animation-delay: 180ms; background: #f1c40f;}
+.bubble:nth-child(3) { animation-delay: 360ms; background: #e67e22;}
+.bubble:nth-child(4) {animation-delay: 540ms; background: #2980b9;}
+@keyframes expand {0% {transform: scale(1);} 25% {transform: scale(1.55);}}
+
+
+
+/**
+ * iOS 6 style switch checkboxes
+ * by Lea Verou http://lea.verou.me
+ */
+:root input[type="checkbox"] {
+  /* :root here acting as a filter for older browsers */
+  position: absolute;
+  opacity: 0;
+}
+:root input[type="checkbox"] + div {
+  display: inline-block;
+  vertical-align: middle;
+  width: 3em;
+  height: 1em;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 999px;
+  margin: 0;
+  background: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), transparent), linear-gradient(90deg, #3d99f5 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  background-origin: border-box;
+  background-clip: border-box;
+  overflow: hidden;
+  transition-duration: .4s;
+  transition-property: padding, width, background-position, text-indent;
+  box-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.2) inset, 0 0.45em 0 0.1em rgba(0, 0, 0, 0.05) inset;
+  font-size: 150%;
+  /* change this and see how they adjust! */
+}
+:root input[type="checkbox"] + div:before {
+  content: 'On';
+  float: left;
+  width: 1.65em;
+  height: 1.65em;
+  margin: -.1em;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  border-radius: inherit;
+  background: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), transparent);
+  box-shadow: 0 0.1em 0.1em 0.1em rgba(255, 255, 255, 0.8) inset, 0 0 0.5em rgba(0, 0, 0, 0.3);
+  color: white;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3);
+  text-indent: -2.5em;
+}
+:root input[type="checkbox"] + div:after {
+  content: 'Off';
+  float: left;
+  text-indent: .5em;
+  color: rgba(0, 0, 0, 0.45);
+  text-shadow: none;
+}
+:root input[type="checkbox"]:checked + div {
+  padding-left: 2em;
+  width: 1em;
+  background-position: 0 0;
+}
+:root input[type="checkbox"]:active + div:before {
+  background-color: #eee;
+}
+:root input[type="checkbox"]:focus + div {
+  box-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.2) inset, 0 0.45em 0 0.1em rgba(0, 0, 0, 0.05) inset, 0 0 0.4em 1px rgba(255, 0, 0, 0.5);
+}
+
+:root input[type="checkbox"] + div:before, :root input[type="checkbox"] + div:after {
+  font: bold 60%/1.9 sans-serif;
+  text-transform: uppercase;
+}
