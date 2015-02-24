@@ -5,8 +5,8 @@ Plugin URL: https://wordpress.org/plugins/broken-url-notifier/
 Donate link: http://varunsridharan.in/
 Tags: broken,borken image, borken url, 404 page , 404 not found, wordpress 404
 Requires at least: 2.0
-Tested up to: 4.0
-Stable tag: 0.3
+Tested up to: 4.2
+Stable tag: 0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -47,14 +47,14 @@ This section describes how to install the plugin and get it working.
 
 == Frequently Asked Questions ==
 
-**Can i change error image **  
+**Can i change error image**  
 Yes you can. we have added 2 images by default. or you can add your own
 
 **Can i change notification email id **  
 Yes you can change it in settings panel
 
 **I have an idea for your plugin!**  
-That\\\'s great. We are always open to your input, and we would like to add anything we think will be useful to a lot of people. Please send your comment/idea to <a href=\"mailto:varunsridharan23@gmail.com\">varunsridharan23@gmail.com</a>
+That's great. We are always open to your input, and we would like to add anything we think will be useful to a lot of people. Please send your comment/idea to <a href=\"mailto:varunsridharan23@gmail.com\">varunsridharan23@gmail.com</a>
 
 **I found a bug!**  
 Oops. Please User github / WordPress to post bugs. <a href="https://github.com/technofreaky/broken-url-notifier"> Open an Issue </a>
@@ -62,6 +62,9 @@ Oops. Please User github / WordPress to post bugs. <a href="https://github.com/t
 
 
 == Changelog ==
+= 0.4 =
+* Minor Bug Fix.
+
 = 0.3 =
 * Converted Whole Plugin Into Class
 * Option To Configure Notification Settings

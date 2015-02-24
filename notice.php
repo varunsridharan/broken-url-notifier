@@ -16,8 +16,8 @@
  
     Plugin Name: Broken Url Notifier
     Plugin URI: http://varunsridharan.in/
-    Description: Sends email to site admin when there is  broken url or image in your website 
-    Version: 0.3
+    Description: Logs & Sends email to site admin when there is  broken url or image in your website 
+    Version: 0.4
     Author: Varun Sridharan
     Author URI: http://varunsridharan.in/
     License: GPL2
@@ -40,7 +40,7 @@ class Broken_Url_Notifier{
 	 * @access public
 	 */
 	public function __construct() {
-		$this->bun_v = '0.3';
+		$this->bun_v = '0.4';
 		register_activation_hook( __FILE__, array($this ,'_activate') );
 		$this->get_exData();
 		if(empty($this->broken_reports)){
@@ -48,6 +48,7 @@ class Broken_Url_Notifier{
 		} 
 		add_action('wp_footer', array($this,'add_footer_script'),200);
 		$this->request_actions();
+        
 		if(is_admin()){
 			add_action('admin_menu', array($this,'add_menu')); 
 		}		
@@ -76,8 +77,8 @@ class Broken_Url_Notifier{
 		if(get_option('broken_url_notifier_img')){ delete_option('broken_url_notifier_img'); }
 		if(get_option('broken_url_notifier_email')){ delete_option('broken_url_notifier_email'); }
 		if(get_option('broken_url_notifier_email_subject')){ delete_option('broken_url_notifier_email_subject'); }
-		
-		# Create New Field
+        
+        # Create New Field
 		add_option("bun_settings", '', '', 'yes'); 
 		add_option("bun_reports", '', '', 'yes');
 	}	
@@ -86,12 +87,13 @@ class Broken_Url_Notifier{
 	 * Adds A Seperate Menu
 	 * @since 0.3
 	 * @access public
+	 * @updated 0.4
 	 * @return Adds Menu Array In WP-ADMIN Menu Array
 	 */
 	public function add_menu(){
-		$page1 = add_menu_page('Broken Url Notifier', 'Broken Url Notifier', 'administrator','broken-url-notifier',array($this,'broken_url_notifier_page'), '');
+		$page1 = add_menu_page('Broken Url Notifier', 'Broken Url Notifier', 'administrator','broken-url-notifier',array($this,'broken_url_notifier_page'), bun_url.'img/icon.png');
 		add_submenu_page( 'broken-url-notifier', 'Settings', 'Settings', 'administrator', 'broken-url-notifier', array($this,'broken_url_notifier_page') );
-		$page2 = add_submenu_page( 'broken-url-notifier', 'View Report', 'View Report', 'administrator', 'broken-url-notifier-reports', array($this,'broken_url_notifier_reports_page') );
+		$page2 = add_submenu_page( 'broken-url-notifier', 'Report', 'Report', 'administrator', 'broken-url-notifier-reports', array($this,'broken_url_notifier_reports_page') );
 		
 		# Register Style & Script
 		$this->register_script_style();
@@ -303,5 +305,4 @@ class Broken_Url_Notifier{
 }
 
 $Broken_Url_Notifier = new Broken_Url_Notifier;
-
 ?>
